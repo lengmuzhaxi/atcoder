@@ -1,23 +1,22 @@
-//
-// Created by dzl on 24-10-18.
-//
-// LUOGU_RID: 183045736
-#include<iostream>
-#include<cstdio>
-#define int long long
-using namespace std;
-signed main()
-{
+#include <bits/stdc++.h>
 
-    int t,n,m;
-    cin>>t;
-    while(t--)
-    {
-        cin>>n>>m;
-        if(n*(n+1)%m==0||n*(n+1)%m>n)
-            cout<<"Alice\n";
+using namespace std;
+
+int main(){
+    int t; cin >> t;
+
+    while(t--){
+        int n,m;
+        cin >> n >> m;
+        int mod = (1ll*n*(n+1))%m;
+        if(mod == 0 || mod > n)
+        {
+            cout << "Alice" << endl;
+        }
         else
-            cout<<"Bob\n";
+            cout << "Bob" << endl;
     }
     return 0;
-}
+}//
+// Created by dzl on 24-10-25.
+//
